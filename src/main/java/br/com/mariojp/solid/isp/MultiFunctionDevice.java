@@ -1,7 +1,13 @@
 package br.com.mariojp.solid.isp;
 
-public interface MultiFunctionDevice {
-	void print(String content);
+public class MultiFunctionDevice implements Printer, Scanner {
+    @Override
+    public void print(String content) {
+        System.out.println("Imprimindo: " + content);
+    }
 
-	void scan(String targetFile);
+    @Override
+    public void scan() {
+        System.out.println("Escaneando documento...");
+    }
 }
